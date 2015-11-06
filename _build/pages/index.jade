@@ -56,7 +56,53 @@ html
                  li(style="background-image: url('assets/images/slider/01.jpg')")
                  li(style="background-image: url('assets/images/slider/01.jpg')")
                  li(style="background-image: url('assets/images/slider/01.jpg')")
+                 
+        section.slider-cta
+            .box
+                .content
+                    h3.title Doador Pessoa Física
+                    p.subtitle   Faça parte da maior rede colaborativa do Brasil
+                    a(href="") Colabore
+            .box
+                .content
+                    h3.title Doador Pessoa Jurídica
+                    p.subtitle   Coloque a sua empresa no movimento social do Brasil
+                    a(href="") Colabore
+            .box
+                .content
+                    h3.title Beneficiário
+                    p.subtitle   Seja Mais Um a participar desta rede colaborativa
+                    a(href="") Inscreva-se
                     
+        section.donation-feed
+            .container
+                .info-left
+                    h3
+                        | causa <br> mais <br>
+                        strong Urgente
+                .percentage
+                    .c100.big.p90
+                        span 90
+                        .slice
+                            .bar
+                            .fill
+                    a(href="#") Colabore
+                .info-right
+                    h3 
+                        strong R$ 80 000 
+                        | Necessários
+                    h3 
+                        strong R$ 75 000  
+                        | Conseguidos
+                    h3 
+                        strong 2000 
+                        | Doadores
+                        
+            .container
+                .testimonies
+                    +testimony()
+                    +testimony()
+                    +testimony()
         .space
                     
         script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
