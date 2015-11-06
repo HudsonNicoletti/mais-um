@@ -14,6 +14,8 @@
             $headerNavLi      = $headerNavUl.find("li"),
             $mobileToggle     = $headerNav.find(".menu-toggle"),
             $mobileLogo       = $headerNav.find(".menu-logo"),
+            $testimoniesWrap  = $(".testimonies"),
+            $testimonies      = $testimoniesWrap.find(".testimony"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -22,6 +24,16 @@
                 paginationSpeed : 400,
                 singleItem: true,
                 stopOnHover: true,
+                addClassActive: false
+            },
+            TestimonyConfig  = {
+                autoPlay : true,
+                navigation : false,
+                slideSpeed : 300,
+                pagination : false,
+                paginationSpeed : 400,
+                singleItem: true,
+                stopOnHover: false,
                 addClassActive: false
             };
         
@@ -132,7 +144,12 @@
             }
         }
         
-        sliderInit();
+        function testinomiesInit()
+        {
+            var owl = $testimoniesWrap.owlCarousel(TestimonyConfig);
+            
+            return owl;
+        }
         
         $mobileToggle.on("click", function(){
             toggleMenu();   
@@ -154,10 +171,12 @@
         });
         
         
-//        if( $body.hasClass("home") )
-//        {
-//            google.maps.event.addDomListener(window, 'load', googlemaps() );
-//        }
+        if( $body.hasClass("home") )
+        {
+            //  google.maps.event.addDomListener(window, 'load', googlemaps() );
+            sliderInit();
+            testinomiesInit();
+        }
         
         
     });
