@@ -20,6 +20,7 @@
             $percentage       = $percentageWrap.find("[data-percentage]"),
             $scrollBtn        = $(".scroll-top"),
             $causesWrap       = $(".causes"),
+            $partnersWrap     = $(".partners-carousel"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -51,6 +52,19 @@
                     [320, 1],
                     [640, 2],
                     [960, 3]
+              ]
+            },
+            PartnersConfig    = {
+                autoPlay : true,
+                navigation : false,
+                slideSpeed : 300,
+                pagination : false,
+                paginationSpeed : 400,
+                itemsCustom : [
+                    [0, 1],
+                    [320, 1],
+                    [640, 2],
+                    [960, 4]
               ]
             };
         
@@ -87,6 +101,13 @@
         function causesInit()
         {
             var owl = $causesWrap.owlCarousel(CausesConfig);
+            
+            return owl;
+        }
+        
+        function partnersInit()
+        {
+            var owl = $partnersWrap.owlCarousel(PartnersConfig);
             
             return owl;
         }
@@ -201,6 +222,7 @@
             sliderInit();
             testinomiesInit();
             causesInit();
+            partnersInit();
             $.scrollIt({
                 topOffset: -60,
                 activeClass: 'active'
