@@ -19,11 +19,6 @@ module.exports = function(grunt){
                 },
                 files: {
                     "../index.html":        "pages/index.jade",
-                    "../empresa.html":      "pages/empresa.jade",
-                    "../masculino.html":    "pages/masculino.jade",
-                    "../feminino.html":     "pages/feminino.jade",
-                    "../cosmedicos.html":   "pages/cosmedicos.jade",
-                    "../contato.html":      "pages/contato.jade",
                 }
             }
         },
@@ -65,7 +60,7 @@ module.exports = function(grunt){
             sass: 
             {
                 files: ['styles/*.sass'],
-                tasks: ['sass','postcss:dist','rucksack'],
+                tasks: ['sass','rucksack','postcss:dist'],
                 options: {
                   livereload: true,
                 }
@@ -81,6 +76,14 @@ module.exports = function(grunt){
             js:
             {
                 files: ['../assets/scripts/*.js'],
+                options: {
+                  livereload: true,
+                }
+            },
+            images:
+            {
+                files: ['../assets/images/**/*'],
+                tasks: ['imagemin'],
                 options: {
                   livereload: true,
                 }

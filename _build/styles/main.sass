@@ -14,9 +14,16 @@
 @import '_circular-percentage'
 
 @import 'header'
+@import 'sections'
 @import 'section.slider'
 @import 'section.slider-cta'
 @import 'section.donation-feed'
+@import 'section.recent'
+@import 'section.about'
+@import 'section.about-stats'
+@import 'section.partners'
+@import 'section.contact'
+@import 'footer'
 
 @viewport
     zoom: 1.0
@@ -33,6 +40,35 @@ body,html
     
     a , a:active , a:hover , a:link , a:visited
         text-decoration: none
+    
+    .scroll-top
+        position: fixed
+        right: 10px
+        bottom: 10px
+        width: 48px
+        height: 48px
+        background-color: $_primary-green
+        text-align: center
+        display: flex
+        justify-content: center
+        align-content: center
+        border-radius: 50%
+        transition: all 0.4s ease-in-out
+        opacity: 0
+        box-shadow: 0px 2px 3px $_primary-black
+
+        a
+            display: block
+            text-decoration: none
+            color: $_primary-white
+            font-size: 30px
+            cursor: pointer
+
+        &:hover
+            background-color: lighten( $_primary-green, 10%)
+
+            a
+                color: $_primary-white
     
     .space
         height: 2000px
