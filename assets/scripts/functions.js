@@ -39,7 +39,8 @@
                 paginationSpeed : 400,
                 singleItem: true,
                 stopOnHover: false,
-                addClassActive: false
+                addClassActive: false,
+                autoHeight: true
             },
             CausesConfig      = {
                 autoPlay : true,
