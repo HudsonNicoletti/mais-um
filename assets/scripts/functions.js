@@ -16,6 +16,11 @@
             $mobileLogo       = $headerNav.find(".menu-logo"),
             $testimoniesWrap  = $(".testimonies"),
             $testimonies      = $testimoniesWrap.find(".testimony"),
+            $percentageWrap   = $(".percentage"),
+            $percentage       = $percentageWrap.find("[data-percentage]"),
+            $scrollBtn        = $(".scroll-top"),
+            $causesWrap       = $(".causes"),
+            $sections         = $("[data-section]"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -26,7 +31,7 @@
                 stopOnHover: true,
                 addClassActive: false
             },
-            TestimonyConfig  = {
+            TestimonyConfig   = {
                 autoPlay : true,
                 navigation : false,
                 slideSpeed : 300,
@@ -35,6 +40,19 @@
                 singleItem: true,
                 stopOnHover: false,
                 addClassActive: false
+            },
+            CausesConfig      = {
+                autoPlay : true,
+                navigation : false,
+                slideSpeed : 300,
+                pagination : false,
+                paginationSpeed : 400,
+                itemsCustom : [
+                    [0, 1],
+                    [320, 1],
+                    [640, 2],
+                    [960, 3]
+              ]
             };
         
         function fixedHeader( offset )
@@ -60,9 +78,22 @@
             
         }
         
+        function headerStates( offset )
+        {
+
+                console.log($("[data-section='1']").offset().top);
+        }
+        
         function sliderInit()
         {
             var owl = $slider.owlCarousel(SliderConfig);
+            
+            return owl;
+        }
+        
+        function causesInit()
+        {
+            var owl = $causesWrap.owlCarousel(CausesConfig);
             
             return owl;
         }
@@ -155,19 +186,20 @@
             toggleMenu();   
         });
 
-//        $scrollBtn.on("click", function(){
-//            $htmlbody.animate({
-//                scrollTop : 0
-//            },800);
-//
-//            return false;
-//        })
+        $scrollBtn.on("click", function(){
+            $htmlbody.animate({
+                scrollTop : 0
+            },800);
+
+            return false;
+        });
         
         $window.scroll(function(){
             var offset = $(window).scrollTop();
 
             fixedHeader( offset );
-            //scrollTopVisibility(offset);
+            headerStates( offset );
+            scrollTopVisibility(offset);
         });
         
         
@@ -176,6 +208,7 @@
             //  google.maps.event.addDomListener(window, 'load', googlemaps() );
             sliderInit();
             testinomiesInit();
+            causesInit();
         }
         
         

@@ -20,13 +20,13 @@ html
                 ul
                     li
                         i.fa.fa-map-marker  
-                        | Lorem ipsum dolor sit amet.
+                        | 4321 YOUR ADDRESS, COUNTRY
                     li
-                        i.fa.fa-map-marker  
-                        | Lorem ipsum dolor sit amet.
+                        i.fa.fa-phone
+                        |  8 (800) 695-2684
                     li
-                        i.fa.fa-map-marker  
-                        | Lorem ipsum dolor sit amet.
+                        i.fa.fa-envelope-o
+                        | SUPPORT@MERCYHEART.COM
                         
                 form.search(action="")
                     input(type="text",placeholder="Pesquisar ...")
@@ -44,18 +44,30 @@ html
                 .menu-toggle
                     i.fa.fa-bars
                 ul
-                    li.active: a(href="index.html") Home
-                    li: a(href="index.html") Colabore
-                    li: a(href="index.html") Projetos
-                    li: a(href="index.html") Mais Um
-                    li: a(href="index.html") Parceiros
-                    li: a(href="index.html") Contato
+                    li: a(href="index.html",data-index="1") Home
+                    li: a(href="index.html",data-index="2") Colabore
+                    li: a(href="index.html",data-index="3") Projetos
+                    li: a(href="index.html",data-index="4") Mais Um
+                    li: a(href="index.html",data-index="5") Parceiros
+                    li: a(href="index.html",data-index="6") Contato
                     
-        section.slider
+        section.slider(data-section="1")
              ul.slides-container
                  li(style="background-image: url('assets/images/slider/01.jpg')")
+                    .container
+                        h4.handwriting #sejamaisum
+                        h2.big A <strong> ENTIDADE X </strong> PRECISA DA SUA <b>AJUDA</b>
+                        a.cta(href="#") Colabore
                  li(style="background-image: url('assets/images/slider/01.jpg')")
+                    .container
+                        h4.handwriting #sejamaisum
+                        h2.big A <strong> ENTIDADE X </strong> PRECISA DA SUA <b>AJUDA</b>
+                        a.cta(href="#") Colabore
                  li(style="background-image: url('assets/images/slider/01.jpg')")
+                    .container
+                        h4.handwriting #sejamaisum
+                        h2.big A <strong> ENTIDADE X </strong> PRECISA DA SUA <b>AJUDA</b>
+                        a.cta(href="#") Colabore
                  
         section.slider-cta
             .box
@@ -74,7 +86,7 @@ html
                     p.subtitle   Seja Mais Um a participar desta rede colaborativa
                     a(href="") Inscreva-se
                     
-        section.donation-feed
+        section.donation-feed(data-section="2")
             .container
                 .info-left
                     h3
@@ -103,6 +115,24 @@ html
                     +testimony()
                     +testimony()
                     +testimony()
+                    
+        section.recent(data-section="3")
+            .container
+                h2.title 
+                    strong Causas 
+                    | Recentes
+                .causes
+                    +cause("assets/images/content/causes/03.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",80,80,"#")
+                    +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
+                    +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
+                    +cause("assets/images/content/causes/03.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",80,80,"#")
+                    +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
+                    +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
+                    
+                    
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
         .space
                     
         script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")

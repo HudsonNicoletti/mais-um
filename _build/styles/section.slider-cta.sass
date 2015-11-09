@@ -11,7 +11,7 @@ section.slider-cta
     
     .box
         width: 33.3%
-        height: 400px
+        height: 430px
         background:
             image: url('../images/logo/mobile-alt.png')
             repeat: no-repeat
@@ -75,11 +75,19 @@ section.slider-cta
                     background-color: rgba( $_primary-white , 0.7 )
                     bottom: -12px
                     left: 50%
+                
+                @media screen and ( min-width: 960px ) and ( max-width: 1200px )
+                    margin-top: 20px
+                    margin-bottom: 33px
+                    padding-bottom: 10px
+                    line-height: 50px
+                    font:
+                        size: 50px
 
             p.subtitle
                 opacity: 0.8
                 font:
-                    size: 24px
+                    size: responsive 18px 24px !important
                     family: Raleway
                 color: $_primary-white
                 line-height: 1.6em

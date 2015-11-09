@@ -20,21 +20,31 @@ header
             justify-content: center
             flex-direction: row
             list-style: none
-            padding: 4px 6px
-            
-            @media(max-width:960px)
-                
-                flex-direction: column
+            margin: 0
             
             li
-                padding: 6px 8px
+                padding: 6px 14px
+                font:
+                    family: Open Sans
+                    size: 14px
+                    weight: 400
+                text-transform: uppercase
+                color: $_primary-black
+                
+                i
+                    padding: 0 10px
+                    font: 
+                        weight: 700
+                    color: $_primary-green
                 
         .search
             padding: 0 30px
+            width: 300px
             
             input
                 padding: 9px 6px
                 margin: 0
+                width: calc( 100% - 43px)
                 border:
                     top: none
                     bottom: none

@@ -3,3 +3,19 @@ mixin testimony()
         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis vel ex voluptas quaerat, velit asperiores tempora, atque error facere incidunt autem tenetur dolorem illo aperiam nemo!
         h4 Jhon Doe 
             small Função
+            
+            
+mixin cause(image,title,gathered,needed,link)
+    .item
+        figure
+            img(src=image, alt=title)
+        p!=title
+        .values
+            .data.gathered
+                span!=gathered
+                small Conseguidos
+            i.of de
+            .data.needed
+                span!=needed
+                small Necessários
+        a.cta(href=link) Doe
