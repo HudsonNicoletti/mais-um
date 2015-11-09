@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
   <body class="home">
-    <header>
+    <header data-scroll-index="1">
       <div class="info-section">
         <ul>
           <li><i class="fa fa-map-marker"> </i>4321 YOUR ADDRESS, COUNTRY</li>
@@ -30,16 +30,16 @@
         <div class="menu-logo"></div>
         <div class="menu-toggle"><i class="fa fa-bars"></i></div>
         <ul>
-          <li><a href="index.html" data-index="1">Home</a></li>
-          <li><a href="index.html" data-index="2">Colabore</a></li>
-          <li><a href="index.html" data-index="3">Projetos</a></li>
-          <li><a href="index.html" data-index="4">Mais Um</a></li>
-          <li><a href="index.html" data-index="5">Parceiros</a></li>
-          <li><a href="index.html" data-index="6">Contato</a></li>
+          <li data-scroll-nav="1"><a href="#">Home</a></li>
+          <li data-scroll-nav="2"><a href="#">Colabore</a></li>
+          <li data-scroll-nav="3"><a href="#">Projetos</a></li>
+          <li data-scroll-nav="4"><a href="#">Mais Um</a></li>
+          <li data-scroll-nav="5"><a href="#">Parceiros</a></li>
+          <li data-scroll-nav="6"><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
-    <section data-section="1" class="slider">
+    <section class="slider">
       <ul class="slides-container">
         <li style="background-image: url('assets/images/slider/01.jpg')">
           <div class="container">
@@ -81,13 +81,13 @@
         </div>
       </div>
     </section>
-    <section data-section="2" class="donation-feed">
+    <section data-scroll-index="2" class="donation-feed">
       <div class="container">
         <div class="info-left">
           <h3>causa <br> mais <br><strong>Urgente</strong></h3>
         </div>
         <div class="percentage">
-          <div class="c100 big p90"><span>90</span>
+          <div class="c100 big p96"><span>96</span>
             <div class="slice">
               <div class="bar"></div>
               <div class="fill"></div>
@@ -117,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section data-section="3" class="recent">
+    <section data-scroll-index="3" class="recent">
       <div class="container">
         <h2 class="title"> <strong>Causas </strong>Recentes</h2>
         <div class="causes">
@@ -172,11 +172,54 @@
         </div>
       </div>
     </section>
+    <section data-scroll-index="4" class="about">
+      <div class="container">
+        <div class="title"><img src="assets/images/logo/default.png" alt="Mais Um"></div>
+        <div class="content">
+          <div class="item">
+            <h4 class="title"><strong>O que </strong>fazemos</h4>
+            <ul>
+              <li>
+                <p>é provocar a aproximação entre doadores e organizações incentivando a transformação social.</p>
+              </li>
+              <li>
+                <p>
+                  <encurtar>o caminho das doações, com motivação e incentivo para que elas aconteçam</encurtar>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <criar>uma ponte entre INSTITUIÇÕES  e PESSOAS predispostas a ajudar</criar>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <h4 class="title"><strong>Por que </strong>ser mais um ?</h4>
+            <p class="big">Aqui você faz parte de um grupo de pessoas que estão realmente interessados em fazer a diferença.</p>
+          </div>
+          <div class="item">
+            <figure class="join-us">
+              <h4 class="handwriting">#sejamaisum</h4><a class="cta">Junte-se a nós</a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-stats">
+      <div class="container">
+        <div class="stats"><i class="fa fa-heart"></i><span>12345</span><small>causas</small></div>
+        <div class="stats"><i class="fa fa-globe"></i><span>12345</span><small>lugares</small></div>
+        <div class="stats"><i class="fa fa-user"></i><span>12345</span><small>doadores</small></div>
+        <div class="stats"><i class="fa fa-users"></i><span>12345</span><small>pessoas ajudadas</small></div>
+      </div>
+    </section>
     <div class="scroll-top"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
     <div class="space"></div>
     <script type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="assets/scripts/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/scrollIt.js"></script>
     <script type="text/javascript" src="assets/scripts/functions.js"></script>
   </body>
 </html>

@@ -20,7 +20,6 @@
             $percentage       = $percentageWrap.find("[data-percentage]"),
             $scrollBtn        = $(".scroll-top"),
             $causesWrap       = $(".causes"),
-            $sections         = $("[data-section]"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -76,12 +75,6 @@
                 $mobileLogo.removeClass("active");
             }
             
-        }
-        
-        function headerStates( offset )
-        {
-
-                console.log($("[data-section='1']").offset().top);
         }
         
         function sliderInit()
@@ -198,7 +191,6 @@
             var offset = $(window).scrollTop();
 
             fixedHeader( offset );
-            headerStates( offset );
             scrollTopVisibility(offset);
         });
         
@@ -209,6 +201,10 @@
             sliderInit();
             testinomiesInit();
             causesInit();
+            $.scrollIt({
+                topOffset: -60,
+                activeClass: 'active'
+            });
         }
         
         

@@ -15,7 +15,7 @@ html
         link(rel="shortcut icon" href="/favicon.ico")
     body.home
                  
-        header
+        header(data-scroll-index="1")
             .info-section
                 ul
                     li
@@ -44,14 +44,14 @@ html
                 .menu-toggle
                     i.fa.fa-bars
                 ul
-                    li: a(href="index.html",data-index="1") Home
-                    li: a(href="index.html",data-index="2") Colabore
-                    li: a(href="index.html",data-index="3") Projetos
-                    li: a(href="index.html",data-index="4") Mais Um
-                    li: a(href="index.html",data-index="5") Parceiros
-                    li: a(href="index.html",data-index="6") Contato
+                    li(data-scroll-nav="1"): a(href="#") Home
+                    li(data-scroll-nav="2"): a(href="#") Colabore
+                    li(data-scroll-nav="3"): a(href="#") Projetos
+                    li(data-scroll-nav="4"): a(href="#") Mais Um
+                    li(data-scroll-nav="5"): a(href="#") Parceiros
+                    li(data-scroll-nav="6"): a(href="#") Contato
                     
-        section.slider(data-section="1")
+        section.slider
              ul.slides-container
                  li(style="background-image: url('assets/images/slider/01.jpg')")
                     .container
@@ -86,15 +86,15 @@ html
                     p.subtitle   Seja Mais Um a participar desta rede colaborativa
                     a(href="") Inscreva-se
                     
-        section.donation-feed(data-section="2")
+        section.donation-feed(data-scroll-index="2")
             .container
                 .info-left
                     h3
                         | causa <br> mais <br>
                         strong Urgente
                 .percentage
-                    .c100.big.p90
-                        span 90
+                    .c100.big.p96
+                        span 96
                         .slice
                             .bar
                             .fill
@@ -116,7 +116,7 @@ html
                     +testimony()
                     +testimony()
                     
-        section.recent(data-section="3")
+        section.recent(data-scroll-index="3")
             .container
                 h2.title 
                     strong Causas 
@@ -129,6 +129,50 @@ html
                     +cause("assets/images/content/causes/02.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",50,60,"#")
                     +cause("assets/images/content/causes/01.jpg"," Lorem ipsum dolor sit amet, consectetur adipisicing.",75,90,"#")
                     
+        section.about(data-scroll-index="4")
+            .container
+                .title
+                    img(src="assets/images/logo/default.png", alt="Mais Um")
+                .content
+                    .item
+                        h4.title
+                            strong O que 
+                            | fazemos
+                        ul
+                            li: p: é provocar a aproximação entre doadores e organizações incentivando a transformação social.
+                            li: p: encurtar o caminho das doações, com motivação e incentivo para que elas aconteçam
+                            li: p: criar uma ponte entre INSTITUIÇÕES  e PESSOAS predispostas a ajudar
+                            
+                    .item
+                        h4.title
+                            strong Por que 
+                            | ser mais um ?
+                        p.big Aqui você faz parte de um grupo de pessoas que estão realmente interessados em fazer a diferença.
+                        
+                    .item
+                        figure.join-us
+                            h4.handwriting #sejamaisum
+                            a.cta Junte-se a nós
+                            
+        section.about-stats
+            .container
+                .stats
+                    i.fa.fa-heart
+                    span 12345
+                    small causas
+                .stats
+                    i.fa.fa-globe
+                    span 12345
+                    small lugares
+                .stats
+                    i.fa.fa-user
+                    span 12345
+                    small doadores
+                .stats
+                    i.fa.fa-users
+                    span 12345
+                    small pessoas ajudadas
+                    
                     
         .scroll-top
             a(href="#")
@@ -138,4 +182,5 @@ html
         script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
         script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
         script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.js")
         script(type="text/javascript" src="assets/scripts/functions.js")
