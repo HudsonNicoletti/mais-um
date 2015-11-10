@@ -21,6 +21,10 @@
             $scrollBtn        = $(".scroll-top"),
             $causesWrap       = $(".causes"),
             $partnersWrap     = $(".partners-carousel"),
+            $aboutSliderWrap  = $(".about-slider"),
+            $tabsWrap         = $(".tabs"),
+            $tabsIndexes      = $tabsWrap.find("ul.indexes li"),
+            $tabsTargets      = $tabsWrap.find("ul.targets li"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -29,7 +33,8 @@
                 paginationSpeed : 400,
                 singleItem: true,
                 stopOnHover: true,
-                addClassActive: false
+                addClassActive: false,
+                theme: "slider-theme"
             },
             TestimonyConfig   = {
                 autoPlay : true,
@@ -67,6 +72,17 @@
                     [640, 2],
                     [960, 4]
               ]
+            },
+            aboutSliderConfig = {
+                autoPlay : true,
+                navigation : false,
+                slideSpeed : 300,
+                pagination : true,
+                paginationSpeed : 400,
+                singleItem: true,
+                stopOnHover: false,
+                addClassActive: false,
+                theme: "about-us-owl"
             };
         
         function fixedHeader( offset )
@@ -197,6 +213,25 @@
             return owl;
         }
         
+        function aboutSliderInit()
+        {
+            var owl = $aboutSliderWrap.owlCarousel(aboutSliderConfig);
+            
+            return owl;
+        }
+        
+        function tabs( selected )
+        {
+            var target = selected.data("target");
+            
+            $tabsIndexes.removeClass("active");
+            $tabsTargets.removeClass("active");
+            
+            $tabsIndexes.filter("[data-target='"+target+"']").addClass("active");
+            $tabsTargets.filter("[data-tab='"+target+"']").addClass("active");
+            
+        }
+        
         $mobileToggle.on("click", function(){
             toggleMenu();   
         });
@@ -227,6 +262,18 @@
             $.scrollIt({
                 topOffset: -60,
                 activeClass: 'active'
+            });
+        }
+        
+        if( $body.hasClass("about-us") )
+        {
+            CausesConfig.singleItem = true;
+            partnersInit();
+            causesInit();
+            aboutSliderInit();
+            
+            $tabsIndexes.on("click", function(){
+               tabs( $(this) ) 
             });
         }
         

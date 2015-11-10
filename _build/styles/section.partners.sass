@@ -2,16 +2,19 @@ section.partners
     padding: 15px
     background:
         color: $_primary-greyD
+        
+    &.light
+        background:
+            color: $_primary-white !important
     
     .container
         display: flex
         align-items: center
         justify-content: center
-        flex-direction: row
+        flex-direction: column
         padding: 40px 0
         
         @media( max-width: 960px )
-            flex-direction: column
             width: 100%
             
         .partners-carousel
