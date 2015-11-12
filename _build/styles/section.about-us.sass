@@ -42,7 +42,6 @@ section.about-us
                             weight: 300
                             
             .about-slider
-                margin-top: 100px
                 @media( max-width: 960px)
                     margin-top: 0
                 img
@@ -54,6 +53,10 @@ section.about-us
                 .container
                     border-bottom: none !important
                     width: 100% !important
+                    justify-content: flex-start !important
+                    
+                    h2.title
+                        font-size: 50px !important
                     
             .tabs
             
@@ -69,6 +72,19 @@ section.about-us
                     &.indexes                        
                         flex-direction: row
                     
+                        @media( max-width: 640px)
+                            flex-direction: column
+                        
+                            li
+                                border-radius: 0px !important
+                                border:
+                                    bottom: solid 1px $_primary-white !important
+                                    right: solid 1px $_primary-green !important
+                                    left: solid 1px $_primary-green !important
+                            
+                            li.active
+                                border-radius: 8px 8px 0 0 !important
+                        
                         li
                             border:
                                 top:     solid 1px $_primary-greyL

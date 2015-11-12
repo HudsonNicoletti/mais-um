@@ -57,6 +57,14 @@ module.exports = function(grunt){
             }
         },
         
+        uglify: {
+            my_target: {
+                files: {
+                    '../assets/scripts/functions.min.js': ['scripts/functions.js']
+                }
+            }
+        },
+        
         watch: {
             sass: 
             {
@@ -77,6 +85,7 @@ module.exports = function(grunt){
             js:
             {
                 files: ['../assets/scripts/*.js'],
+                tasks: ['uglify'],
                 options: {
                   livereload: true,
                 }
@@ -101,5 +110,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-rucksack');
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.registerTask('default', ['watch','imagemin'])
+    grunt.registerTask('default', ['watch'])
 }
