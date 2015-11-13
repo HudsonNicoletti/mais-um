@@ -84,13 +84,32 @@ section.recent
                                 weight: 900
                             color: $_primary-greyD !important
                         
-                        &:after
-                            content: "k"
-                            font:
-                                size: 32px
-                                family: Open Sans
-                                weight: 900
-                                color: $_primary-greyD !important
+                        &.thousand                        
+                            &:after
+                                content: "k"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
+                        
+                        &.million                        
+                            &:after
+                                content: "kk"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
+                        
+                        &.billion                        
+                            &:after
+                                content: "kkk"
+                                font:
+                                    size: 28px
+                                    family: Open Sans
+                                    weight: 900
+                                    color: $_primary-greyD !important
                         
                 a
                     display: inline-block

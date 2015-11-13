@@ -11,11 +11,11 @@ mixin cause(image,title,gathered,needed,link)
         p!=title
         .values
             .data.gathered
-                span!=gathered
+                span.thousand!=gathered
                 small Conseguidos
             i.of de
             .data.needed
-                span!=needed
+                span.million!=needed
                 small Necessários
         a.cta(href=link) Doe
         
